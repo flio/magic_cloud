@@ -43,7 +43,7 @@ module MagicCloud
       layouter = Layouter.new(width, height)
       visible = layouter.layout!(shapes)
 
-      canvas = Canvas.new(width, height, 'white')
+      canvas = Canvas.new(width, height, 'black')
       visible.each{|sh| sh.draw(canvas)}
 
       canvas.render
@@ -104,7 +104,7 @@ module MagicCloud
     end
 
     # FIXME: should be options too
-    FONT_MIN = 10
+    FONT_MIN = 20
     FONT_MAX = 100
 
     def make_scaler(words, algo)
